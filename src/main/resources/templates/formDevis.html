@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="temp1">
+
+<body>
+
+<div layout:fragment="content1">
+    <br>
+    <br>
+    <br>
+    <div class="col-md-6 offset-3">
+        <form method="post" th:action="@{save}">
+            <div>
+                <label for="Immatriculation">Immatriculation</label>
+                <input id="Immatriculation" class="form-control" type="text" name="Immatriculation" th:value="${vehicle.NDImmat}">
+                <!--<span  class="text-danger" th:errors="${client.nom}"></span>-->
+            </div>
+            <div>
+                <label>Marque</label>
+                <input class="form-control" type="text" name="Marque" th:value="${vehicle.marque}">
+                <!--<span th:errors="${client.prenom}"></span>-->
+            </div>
+            <div>
+                <label>Modèle</label>
+                <input class="form-control" type="text" name="modele" th:value="${vehicle.modele}">
+                <!--<span th:errors="${client.prenom}"></span>-->
+            </div>
+            <div>
+                <label>Numéro de châssis</label>
+                <input class="form-control" type="text" name="nDChassis" th:value="${vehicle.NDChassis}">
+                <!--<span class="text-danger" th:errors="${client.email}"></span>-->
+            </div>
+            <div>
+                <label>Date mise en circulation</label>
+                <input class="form-control" type="text" name="dateMiseEnCirculation" th:value="${vehicle.dateMiseEnCirculation}">
+                <!--<span class="text-danger" th:errors="${client.email}"></span>-->
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

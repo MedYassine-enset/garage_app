@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="temp2">
+
+<body>
+
+<div layout:fragment="content2">
+    <br>
+    <br>
+    <br>
+    <div class="col-md-6 offset-3">
+        <form method="post" th:action="@{save}">
+            <div>
+                <label for="nom">Nom</label>
+                <input id="nom" class="form-control" type="text" name="nom" th:value="${client.nom}">
+                <!--<span  class="text-danger" th:errors="${client.nom}"></span>-->
+            </div>
+            <div>
+                <label>Prenom</label>
+                <input class="form-control" type="text" name="prenom" th:value="${client.prenom}">
+                <!--<span th:errors="${client.prenom}"></span>-->
+            </div>
+            <div>
+                <label>Telephone</label>
+                <input class="form-control" type="text" name="Telephone" th:value="${client.tel}">
+                <!--<span th:errors="${client.prenom}"></span>-->
+            </div>
+            <div>
+                <label>E-mail</label>
+                <input class="form-control" type="text" name="email" th:value="${client.email}">
+                <!--<span class="text-danger" th:errors="${client.email}"></span>-->
+            </div>
+            <div>
+                <label>Adresse</label>
+                <input class="form-control" type="text" name="email" th:value="${client.adresse}">
+                <!--<span class="text-danger" th:errors="${client.email}"></span>-->
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

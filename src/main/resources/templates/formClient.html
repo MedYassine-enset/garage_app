@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="temp1"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<div layout:fragment="content1">
+  <div class="card-header bg-black text-white fixed-top form-control align-text-top flex-fill" style="margin-left: 70px;text-justify: auto">
+    <button class="btn btn-primary" th:href="@{formclient}">Client</button>
+    <button class="btn btn-primary">Vehicle</button>
+    <button class="btn btn-primary">Devis</button>
+  <div class="text-center">Dossier Numéro<p th:text="${dossier.getNumeroDossier()}"></p></div></div></div>
+<div>
+  <section layout:fragment="content2">
+
+  </section>
+</div>
+</body>
+</html>
